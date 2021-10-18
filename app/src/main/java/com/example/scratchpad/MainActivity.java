@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         b = 50;
 
         addNum(a, b);
+        System.out.println(addMultiple(1, 2, 3));
+        System.out.println(classMultiply(4, 5));
+        System.out.println(classSubtract(15, 5));
+        System.out.println(classDivide(15.23, 1423.23));
     }
 
     public void add() {
@@ -34,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(equals);
     }
 
+    public int addMultiple(int x, int y, int z) {
+        int number = x + y + z;
+        return number;
+    }
+
     public int calculator(String operator, int firstNumber, int secondNumber) {
         int output;
         switch(operator) {
@@ -44,11 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 output = subtract(firstNumber, secondNumber);
                 break;
             case "x":
+            case "*": {
                 output = multiply(firstNumber, secondNumber);
                 break;
-            case "*":
-                output = multiply(firstNumber, secondNumber);
-                break;
+            }
             case "/":
                 output =  divide(firstNumber, secondNumber);
                 break;
@@ -70,7 +78,19 @@ public class MainActivity extends AppCompatActivity {
         return firstNumber * secondNumber;
     }
 
+    public float classMultiply(float firstNumber, int secondNumber) {
+        return firstNumber * secondNumber;
+    }
+
+    public float classSubtract(float firstNumber, float secondNumber) {
+        return firstNumber - secondNumber;
+    }
+
     public int divide(int firstNumber, int secondNumber) {
+        return firstNumber / secondNumber;
+    }
+
+    public float classDivide(float firstNumber, float secondNumber) {
         return firstNumber / secondNumber;
     }
 }
